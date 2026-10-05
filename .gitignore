@@ -1,0 +1,19 @@
+# Godot 4 — arquivos importados e temporários
+.godot/
+# Exportações locais
+build/
+exports/
+# Logs e arquivos do sistema
+*.log
+.DS_Store
+Thumbs.db
+# Configurações pessoais de editores
+.vscode/
+.idea/
+# Arquivos grandes ou pessoais
+*.psd
+*.kra
+*.blend1
+.env
+# Dados da aplicação piloto — não versionar dados pessoais
+pilot-data/
