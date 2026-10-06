@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://brgu5s3dri2jl"]
+
+[node name="ResultScreen" type="Node2D" unique_id=2023262526]
+
+[node name="ResultScreen (Control)" type="Control" parent="." unique_id=1218693448]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ResultScreen (Control)" unique_id=295592943]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title (Label)" type="Label" parent="ResultScreen (Control)/VBoxContainer" unique_id=1568845271]
+layout_mode = 2
+
+[node name="ScoreLabel (Label)" type="Label" parent="ResultScreen (Control)/VBoxContainer" unique_id=177520383]
+layout_mode = 2
+
+[node name="EducationMessage (Label)" type="Label" parent="ResultScreen (Control)/VBoxContainer" unique_id=641695073]
+layout_mode = 2
+
+[node name="HomeButton(Button)" type="Button" parent="ResultScreen (Control)/VBoxContainer" unique_id=1188064054]
+layout_mode = 2
+
+[node name="PlayAgainButton(Button)" type="Button" parent="ResultScreen (Control)/VBoxContainer" unique_id=1899757620]
+layout_mode = 2

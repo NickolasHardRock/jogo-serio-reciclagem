@@ -1,0 +1,30 @@
+[
+	{
+		"id":"jornal",
+		"nome":"Jornal limpo",
+		"categoria":"papel",
+		"imagem":"res://assets/materials/jornal.png",
+		"mensagem":"Papel limpo pode ser separado para reciclagem."
+	},
+	{
+		"id":"lata",
+		"nome":"Lata de alumínio",
+		"categoria":"metal",
+		"imagem":"res://assets/materials/lata.png",
+		"mensagem":"Metais podem ser reciclados e reaproveitados."
+	},
+	{
+		"id":"pote_vidro",
+		"nome":"Pote de Vidro",
+		"categoria":"vidro",
+		"imagem":"res://assets/materials/pote_vidro.png",
+		"mensagem":"O vidro exige cuidado no manuseio e descarte."
+	},
+	{
+		"id":"resto_comida",
+		"nome":"Resto de comida",
+		"categoria":"rejeito",
+		"imagem":"res://assets/materials/restos_comida.png",
+		"mensagem":"Nem todo resíduo pertence à coleta de recicláveis."
+	},
+]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://btv63pmc6veq3"]
+
+[node name="Main" type="Node2D" unique_id=1602880164]
+
+[node name="Main (Node)" type="Node" parent="." unique_id=1854983393]
+
+[node name="Background (ColorRect)" type="ColorRect" parent="Main (Node)" unique_id=73588329]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScreenContainer (Control)" type="Control" parent="Main (Node)" unique_id=1141876033]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioManager(Node)" type="Node" parent="Main (Node)" unique_id=1709288837]

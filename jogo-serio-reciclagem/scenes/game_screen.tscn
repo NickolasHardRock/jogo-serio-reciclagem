@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dhbi7xwohd6tp"]
+
+[node name="GameScreen" type="Node2D" unique_id=1085286737]
+
+[node name="GameScreen (Control)" type="Control" parent="." unique_id=1957799255]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="GameScreen (Control)" unique_id=2140521385]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameScreen (Control)/MarginContainer" unique_id=1174370725]
+layout_mode = 2
+
+[node name="Header (HBoxContainer)" type="HBoxContainer" parent="GameScreen (Control)/MarginContainer/VBoxContainer" unique_id=6338570]
+layout_mode = 2
+
+[node name="RoundLabel (Label)" type="Label" parent="GameScreen (Control)/MarginContainer/VBoxContainer/Header (HBoxContainer)" unique_id=783674692]
+layout_mode = 2
+
+[node name="ScoreLabel (Label)" type="Label" parent="GameScreen (Control)/MarginContainer/VBoxContainer/Header (HBoxContainer)" unique_id=1910692022]
+layout_mode = 2
+
+[node name="MaterialPanel (PanelContainer)" type="PanelContainer" parent="GameScreen (Control)/MarginContainer/VBoxContainer" unique_id=485321447]
+layout_mode = 2
+
+[node name="MaterialImage (TextureRect)" type="TextureRect" parent="GameScreen (Control)/MarginContainer/VBoxContainer/MaterialPanel (PanelContainer)" unique_id=2059337500]
+layout_mode = 2
+
+[node name="MaterialName (Label)" type="Label" parent="GameScreen (Control)/MarginContainer/VBoxContainer/MaterialPanel (PanelContainer)" unique_id=1141332192]
+layout_mode = 2
+
+[node name="CategoryGrid (GridContainer)" type="GridContainer" parent="GameScreen (Control)/MarginContainer/VBoxContainer" unique_id=2114922416]
+layout_mode = 2
+
+[node name="FeedbackPanel (PanelContainer)" type="PanelContainer" parent="GameScreen (Control)/MarginContainer/VBoxContainer" unique_id=62769529]
+layout_mode = 2
