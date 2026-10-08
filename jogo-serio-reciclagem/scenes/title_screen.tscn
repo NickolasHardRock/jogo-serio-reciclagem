@@ -16,10 +16,11 @@ offset_bottom = 40.0
 [node name="Title (Label)" type="Label" parent="TitleScreen(Control)/VBoxContainer" unique_id=1977773291]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
-text = "JOGO DA RECICLAGEM"
+text = "Missão Reciclar"
 
 [node name="Subtitle (Label)" type="Label" parent="TitleScreen(Control)/VBoxContainer" unique_id=67718696]
 layout_mode = 2
+text = "Ajude cada material a encontrar o lugar certo!"
 
 [node name="Illustration (TextureRect)" type="TextureRect" parent="TitleScreen(Control)/VBoxContainer" unique_id=392746918]
 layout_mode = 2
@@ -32,4 +33,4 @@ text = "JOGAR"
 [node name="Instruction (Button)" type="Button" parent="TitleScreen(Control)/VBoxContainer" unique_id=1351646622]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Instruções"
+text = "Como Jogar"
