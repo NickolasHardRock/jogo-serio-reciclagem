@@ -1,36 +1,37 @@
 [gd_scene format=3 uid="uid://dh46bcc3adgyy"]
 
-[node name="TitleScreen" type="Node2D" unique_id=898076348]
+[ext_resource type="Script" uid="uid://fwfd1v08l3uw" path="res://scripts/title_screen.gd" id="1_fgkus"]
 
-[node name="TitleScreen(Control)" type="Control" parent="." unique_id=2138953486]
+[node name="TitleScreen(Control)" type="Control" unique_id=2138953486]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_fgkus")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TitleScreen(Control)" unique_id=353254140]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=353254140]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Title (Label)" type="Label" parent="TitleScreen(Control)/VBoxContainer" unique_id=1977773291]
+[node name="Title (Label)" type="Label" parent="VBoxContainer" unique_id=1977773291]
 layout_mode = 2
 theme_override_font_sizes/font_size = 56
 text = "Missão Reciclar"
 
-[node name="Subtitle (Label)" type="Label" parent="TitleScreen(Control)/VBoxContainer" unique_id=67718696]
+[node name="Subtitle (Label)" type="Label" parent="VBoxContainer" unique_id=67718696]
 layout_mode = 2
 text = "Ajude cada material a encontrar o lugar certo!"
 
-[node name="Illustration (TextureRect)" type="TextureRect" parent="TitleScreen(Control)/VBoxContainer" unique_id=392746918]
+[node name="Illustration (TextureRect)" type="TextureRect" parent="VBoxContainer" unique_id=392746918]
 layout_mode = 2
 
-[node name="PlayButton (Button)" type="Button" parent="TitleScreen(Control)/VBoxContainer" unique_id=1605946373]
+[node name="PlayButton (Button)" type="Button" parent="VBoxContainer" unique_id=1605946373]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "JOGAR"
 
-[node name="Instruction (Button)" type="Button" parent="TitleScreen(Control)/VBoxContainer" unique_id=1351646622]
+[node name="InstructionButton" type="Button" parent="VBoxContainer" unique_id=1351646622]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Como Jogar"

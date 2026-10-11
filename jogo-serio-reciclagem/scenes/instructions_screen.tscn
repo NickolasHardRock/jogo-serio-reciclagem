@@ -1,26 +1,27 @@
 [gd_scene format=3 uid="uid://nin6bu2ibao2"]
 
-[node name="InstructionsScreen" type="Node2D" unique_id=470406514]
+[ext_resource type="Script" uid="uid://c812wm5dbu1fo" path="res://scripts/instructions_screen.gd" id="1_tvdym"]
 
-[node name="InstructionsScreen (Control)" type="Control" parent="." unique_id=640190780]
+[node name="InstructionsScreen (Control)" type="Control" unique_id=640190780]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_tvdym")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="InstructionsScreen (Control)" unique_id=1280848618]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1280848618]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Title (Label)" type="Label" parent="InstructionsScreen (Control)/VBoxContainer" unique_id=1556831414]
+[node name="Title (Label)" type="Label" parent="VBoxContainer" unique_id=1556831414]
 layout_mode = 2
 
-[node name="InstructionText (Label)" type="Label" parent="InstructionsScreen (Control)/VBoxContainer" unique_id=1670285053]
+[node name="InstructionText (Label)" type="Label" parent="VBoxContainer" unique_id=1670285053]
 layout_mode = 2
 
-[node name="ExamplePanel (PanelContainer)" type="PanelContainer" parent="InstructionsScreen (Control)/VBoxContainer" unique_id=427102368]
+[node name="ExamplePanel (PanelContainer)" type="PanelContainer" parent="VBoxContainer" unique_id=427102368]
 layout_mode = 2
 
-[node name="ContinueButton (Button)" type="Button" parent="InstructionsScreen (Control)/VBoxContainer" unique_id=683332826]
+[node name="ContinueButton (Button)" type="Button" parent="VBoxContainer" unique_id=683332826]
 layout_mode = 2

@@ -17,7 +17,7 @@ func _load_materials() -> void:
 	if file == null:
 		push_error("Não foi possível abrir data/materials.json")
 		return
-		file.close()
+	file.close()
 	
 	var parsed = JSON.parse_string(file.get_as_text())
 	if parsed is Array:

@@ -27,4 +27,11 @@
 		"imagem":"res://assets/materials/restos_comida.png",
 		"mensagem":"Nem todo resíduo pertence à coleta de recicláveis."
 	},
+	{
+	"id": "garrafa_pet",
+	"nome": "Garrafa PET limpa",
+	"categoria": "plastico",
+	"imagem": "res://assets/materials/garrafa_pet.png",
+	"mensagem": "O plástico deve ser separado e encaminhado corretamente."
+	}
 ]

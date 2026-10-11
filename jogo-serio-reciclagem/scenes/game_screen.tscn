@@ -1,41 +1,68 @@
 [gd_scene format=3 uid="uid://dhbi7xwohd6tp"]
 
-[node name="GameScreen" type="Node2D" unique_id=1085286737]
+[ext_resource type="Script" uid="uid://brg6ixpwu40fu" path="res://scripts/game_screen.gd" id="1_8mhku"]
 
-[node name="GameScreen (Control)" type="Control" parent="." unique_id=1957799255]
+[node name="GameScreen (Control)" type="Control" unique_id=1957799255]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_8mhku")
 
-[node name="MarginContainer" type="MarginContainer" parent="GameScreen (Control)" unique_id=2140521385]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2140521385]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GameScreen (Control)/MarginContainer" unique_id=1174370725]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1174370725]
 layout_mode = 2
 
-[node name="Header (HBoxContainer)" type="HBoxContainer" parent="GameScreen (Control)/MarginContainer/VBoxContainer" unique_id=6338570]
+[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=6338570]
 layout_mode = 2
 
-[node name="RoundLabel (Label)" type="Label" parent="GameScreen (Control)/MarginContainer/VBoxContainer/Header (HBoxContainer)" unique_id=783674692]
+[node name="RoundLabel" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=783674692]
 layout_mode = 2
 
-[node name="ScoreLabel (Label)" type="Label" parent="GameScreen (Control)/MarginContainer/VBoxContainer/Header (HBoxContainer)" unique_id=1910692022]
+[node name="ScoreLabel" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=1910692022]
 layout_mode = 2
 
-[node name="MaterialPanel (PanelContainer)" type="PanelContainer" parent="GameScreen (Control)/MarginContainer/VBoxContainer" unique_id=485321447]
+[node name="MaterialPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=485321447]
 layout_mode = 2
 
-[node name="MaterialImage (TextureRect)" type="TextureRect" parent="GameScreen (Control)/MarginContainer/VBoxContainer/MaterialPanel (PanelContainer)" unique_id=2059337500]
+[node name="MaterialImage" type="TextureRect" parent="MarginContainer/VBoxContainer/MaterialPanel" unique_id=2059337500]
 layout_mode = 2
 
-[node name="MaterialName (Label)" type="Label" parent="GameScreen (Control)/MarginContainer/VBoxContainer/MaterialPanel (PanelContainer)" unique_id=1141332192]
+[node name="MaterialName" type="Label" parent="MarginContainer/VBoxContainer/MaterialPanel" unique_id=1141332192]
 layout_mode = 2
 
-[node name="CategoryGrid (GridContainer)" type="GridContainer" parent="GameScreen (Control)/MarginContainer/VBoxContainer" unique_id=2114922416]
+[node name="CategoryGrid" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=2114922416]
 layout_mode = 2
 
-[node name="FeedbackPanel (PanelContainer)" type="PanelContainer" parent="GameScreen (Control)/MarginContainer/VBoxContainer" unique_id=62769529]
+[node name="PapelButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=1231209083]
 layout_mode = 2
+metadata/category_id = "papel"
+
+[node name="PlasticoButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=171185931]
+layout_mode = 2
+metadata/category_id = "plastico"
+
+[node name="MetalButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=797895933]
+layout_mode = 2
+metadata/category_id = "metal"
+
+[node name="VidroButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=1650106494]
+layout_mode = 2
+metadata/category_id = "vidro"
+
+[node name="RejeitoButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=7622666]
+layout_mode = 2
+metadata/category_id = "rejeito"
+
+[node name="FeedbackPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=62769529]
+layout_mode = 2
+script = ExtResource("1_8mhku")
+
+[node name="FeedbackLabel" type="Label" parent="MarginContainer/VBoxContainer/FeedbackPanel" unique_id=209168473]
+layout_mode = 2
+text = "Feedback aparecerá aqui
+"

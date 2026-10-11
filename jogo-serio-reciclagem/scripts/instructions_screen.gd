@@ -1,11 +1,9 @@
-extends Node
+extends Control
 
+signal  continue_requested
 
-# Called when the node enters the scene tree for the first time.
+@onready var continue_button: Button = $VBoxContainer/ContinueButton
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	continue_button.pressed.connect(func(): continue_requested.emit())
+	continue_button.grab_focus()
