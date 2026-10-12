@@ -10,12 +10,20 @@ signal result_requested
 @onready var feedback_label: Label = $MarginContainer/VBoxContainer/FeedbackPanel/FeedbackLabel
 @onready var category_grid: GridContainer = $MarginContainer/VBoxContainer/CategoryGrid
 
+
 var answer_locked := false
 
 func _ready() -> void:
+	print("GameScreen iniciou")
+	print("CategoryGrid: ", category_grid)
+	print("FeedbackPanel: ", feedback_panel)
+	print("MaterialImage: ", material_image)
+	print("MaterialName: ", material_name)
+
 	_connect_category_buttons()
 	feedback_panel.hide()
 	_show_current_round()
+
 	
 
 func _connect_category_buttons() -> void:
@@ -37,31 +45,35 @@ func _show_current_round() -> void:
 	for button in category_grid.get_children():
 		if button is Button:
 			button.disabled = false 
-			button.grab_focus() if button == category_grid.get_child(0) else null
+			if button == category_grid.get_child(0):
+				button.grab_focus()
 
-func _on_category_pressed(category_id:String) -> void:
+func _on_category_pressed(category_id: String) -> void:
 	if answer_locked:
 		return
-	
+
 	answer_locked = true
-	var result := GameManager.answer(category_id)
+
+	var result: Dictionary = GameManager.answer(category_id)
+
 	score_label.text = "Pontos: %d" % GameManager.score
-	
-	if result.correct:
-		feedback_label.text = "Muito bem! %s" % result.message
+
+	if result.get("correct", false):
+		feedback_label.text = "Muito bem! %s" % result.get("message", "")
 	else:
-		feedback_label.text = "Quase! A resposta correta é outra. %s" % result.message
-	
+		feedback_label.text = "Quase! Observe melhor o material. %s" % result.get("message", "")
+
 	feedback_panel.show()
 	_disable_categories()
-	
+
 	await get_tree().create_timer(1.5).timeout
-	if result.finished: 
+
+	if result.get("finished", false):
 		result_requested.emit()
 	else:
 		GameManager.next_round()
 		_show_current_round()
-	
+		
 func _disable_categories() -> void:
 	for button in category_grid.get_children():
 		if button is Button:

@@ -17,7 +17,7 @@ func _load_materials() -> void:
 	if file == null:
 		push_error("Não foi possível abrir data/materials.json")
 		return
-	file.close()
+	
 	
 	var parsed = JSON.parse_string(file.get_as_text())
 	if parsed is Array:
@@ -40,18 +40,22 @@ func next_round() -> void:
 	current_round += 1
 	
 func answer(category_id: String) -> Dictionary:
-	var is_correct := category_id == String(current_material.get("categoria",""))
+	var is_correct: bool = (
+		category_id == String(current_material.get("categoria", ""))
+	)
+
 	if is_correct:
 		score += 10
 		correct_answers += 1
-		
-	return{
-		"correct_answers":is_correct,
+
+	return {
+		"correct": is_correct,
 		"score": score,
-		"message": String(current_material.get("mensagem","")),
-		"material_name": String(current_material.get("nome","")),
+		"message": String(current_material.get("mensagem", "")),
+		"material_name": String(current_material.get("nome", "")),
 		"finished": current_round >= TOTAL_ROUNDS
 	}
+
 	
 func is_finished() -> bool:
 	return current_round >= TOTAL_ROUNDS

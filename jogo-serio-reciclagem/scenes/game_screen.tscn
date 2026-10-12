@@ -1,68 +1,236 @@
 [gd_scene format=3 uid="uid://dhbi7xwohd6tp"]
 
 [ext_resource type="Script" uid="uid://brg6ixpwu40fu" path="res://scripts/game_screen.gd" id="1_8mhku"]
+[ext_resource type="Texture2D" uid="uid://cwtkn20dwfnsd" path="res://assets/ui/fundo_jogo.png" id="2_dv2sx"]
+[ext_resource type="Texture2D" uid="uid://ds7e660jp3sju" path="res://assets/icons/papel.png" id="3_rxmqw"]
+[ext_resource type="Texture2D" uid="uid://bmqvnliw4qllu" path="res://assets/icons/plastico.png" id="4_1urxi"]
+[ext_resource type="Texture2D" uid="uid://b378qhyrarr3h" path="res://assets/icons/metal.png" id="5_dthvl"]
+[ext_resource type="Texture2D" uid="uid://dd5xu6kjlkply" path="res://assets/icons/vidro.png" id="6_r01d7"]
+[ext_resource type="Texture2D" uid="uid://typkgogv2fhk" path="res://assets/icons/rejeito.png" id="7_vnpv3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqbs1"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+bg_color = Color(0.33333334, 0.65882355, 0.9098039, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.15686275, 0.47058824, 0.72156864, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1j0od"]
+bg_color = Color(0.45882353, 0.7372549, 0.92156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0ymd"]
+bg_color = Color(0.21568628, 0.5372549, 0.78039217, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suv6s"]
+bg_color = Color(0.6666667, 0.7058824, 0.7372549, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5hi3"]
+bg_color = Color(0.9490196, 0.7882353, 0.29803923, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.76862746, 0.60784316, 0.09019608, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ko0gt"]
+bg_color = Color(0.972549, 0.8392157, 0.42745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ojey"]
+bg_color = Color(0.8509804, 0.67058825, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r7ef3"]
+bg_color = Color(0.68235296, 0.72156864, 0.7607843, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.413683, 0.41368312, 0.4136828, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18hjo"]
+bg_color = Color(0.49803922, 0.54901963, 0.5921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwfrr"]
+bg_color = Color(0.7764706, 0.80784315, 0.8352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_32r1t"]
+bg_color = Color(0.33333334, 0.78039217, 0.7529412, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.35681665, 0.8787196, 0.9966598, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5jny"]
+bg_color = Color(0.18431373, 0.6156863, 0.5921569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfby7"]
+bg_color = Color(0.47843137, 0.84705883, 0.8235294, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2kqjm"]
+bg_color = Color(0.9490196, 0.6, 0.2901961, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6627451, 0.33333334, 0.07450981, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqp3j"]
+bg_color = Color(0.84705883, 0.4745098, 0.14117648, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gpyx"]
+bg_color = Color(0.9647059, 0.69803923, 0.41960785, 1)
 
 [node name="GameScreen (Control)" type="Control" unique_id=1957799255]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_8mhku")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2140521385]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 30
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1174370725]
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=6338570]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
 [node name="RoundLabel" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=783674692]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 
 [node name="ScoreLabel" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=1910692022]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 
 [node name="MaterialPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=485321447]
+custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
 
 [node name="MaterialImage" type="TextureRect" parent="MarginContainer/VBoxContainer/MaterialPanel" unique_id=2059337500]
+custom_minimum_size = Vector2(180, 180)
 layout_mode = 2
+texture = ExtResource("2_dv2sx")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="MaterialName" type="Label" parent="MarginContainer/VBoxContainer/MaterialPanel" unique_id=1141332192]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
 
 [node name="CategoryGrid" type="GridContainer" parent="MarginContainer/VBoxContainer" unique_id=2114922416]
 layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 2
 
 [node name="PapelButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=1231209083]
+custom_minimum_size = Vector2(220, 80)
 layout_mode = 2
+theme_override_constants/icon_max_width = 64
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqbs1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1j0od")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_d0ymd")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_suv6s")
+text = "Papel e papelão
+"
+icon = ExtResource("3_rxmqw")
 metadata/category_id = "papel"
 
 [node name="PlasticoButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=171185931]
+custom_minimum_size = Vector2(220, 80)
 layout_mode = 2
+theme_override_constants/icon_max_width = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_c5hi3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ko0gt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_2ojey")
+text = "Plástico"
+icon = ExtResource("4_1urxi")
 metadata/category_id = "plastico"
 
 [node name="MetalButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=797895933]
+custom_minimum_size = Vector2(220, 80)
 layout_mode = 2
+theme_override_constants/icon_max_width = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_r7ef3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_18hjo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vwfrr")
+text = "Metal
+"
+icon = ExtResource("5_dthvl")
 metadata/category_id = "metal"
 
 [node name="VidroButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=1650106494]
+custom_minimum_size = Vector2(220, 80)
 layout_mode = 2
+theme_override_constants/icon_max_width = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_32r1t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_d5jny")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mfby7")
+text = "Vidro"
+icon = ExtResource("6_r01d7")
 metadata/category_id = "vidro"
 
 [node name="RejeitoButton" type="Button" parent="MarginContainer/VBoxContainer/CategoryGrid" unique_id=7622666]
 layout_mode = 2
+theme_override_constants/icon_max_width = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_2kqjm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cqp3j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4gpyx")
+text = "Rejeito"
+icon = ExtResource("7_vnpv3")
 metadata/category_id = "rejeito"
 
 [node name="FeedbackPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=62769529]
+custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
-script = ExtResource("1_8mhku")
 
 [node name="FeedbackLabel" type="Label" parent="MarginContainer/VBoxContainer/FeedbackPanel" unique_id=209168473]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "Feedback aparecerá aqui
 "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
